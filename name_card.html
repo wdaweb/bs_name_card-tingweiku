@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .col {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .card {
+            border-radius: 0;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+            border: none;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            display: none;
+        }
+
+        .card::after {
+            content: '';
+            display: none;
+        }
+
+        .image {
+            width: 100%;
+            height: 250px;
+        }
+
+        .card img {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .text-2 p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card::before {
+                content: '';
+                display: block;
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                bottom: 20px;
+                left: -200px;
+                transform-origin: left bottom;
+                transform: rotate(45deg);
+                box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.5);
+                background: #fff;
+            }
+
+            .card::after {
+                content: '';
+                display: block;
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                top: 20px;
+                right: -200px;
+                transform-origin: right top;
+                transform: rotate(45deg);
+                box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+                background: #fff;
+            }
+
+            .image {
+                width: 300px;
+                height: 400px;
+                overflow: hidden;
+            }
+
+            .row {
+                width: 75%;
+            }
+
+            .card img {
+                width: auto;
+                height: 100%;
+            }
+
+            .text-1 {
+                margin: 0 40px -20px 40px;
+            }
+
+            .text-2 {
+                margin: 0 40px -20px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container vw-100 vh-100 d-flex">
+        <div class="row">
+            <div class="col">
+                <div class="card d-flex flex-column flex-sm-row">
+                    <div class="image">
+                        <img src="https://picsum.photos/400/250/?random=1" class="card-img-top">
+                    </div>
+                    <div class="text d-flex flex-column flex-sm-column justify-content-center">
+                        <div class="text-1">
+                            <div class="m-5">
+                                <h6>Front-end Designer</h6>
+                                <h1>Ting Wei Ku</h1>
+                                <h4>泰 山 職 訓 局</h4>
+                            </div>
+                        </div>
+                        <div class="text-2">
+                            <div class="m-5">
+                                <p>住址：24302 新北市泰山區貴子里致遠新村 55 之 1 號</p>
+                                <p>電話：02-2901-8274</p>
+                                <p>E-Mail：Tingwei@example.com</p>
+                                <p>網站：http://www.tingwei.example.cc/</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
